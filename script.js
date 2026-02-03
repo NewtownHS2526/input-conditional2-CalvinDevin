@@ -23,9 +23,9 @@
 //   3. The status message area (id="status")
 // --------------------------------------------
 
-const textBox = 
-const outputBox = 
-const statusBox = 
+const textBox = document.querySelector("#user-input")
+const outputBox = document.querySelector("#quiz-outputs")
+const statusBox = document.querySelector("#status")
 
 // This console.log helps us verify our selections worked correctly.
 // Open the browser's Developer Tools (F12) to see the output.
@@ -43,8 +43,8 @@ console.log(textBox, outputBox, statusBox);
 //   2. A "bonus" variable (boolean) initialized to false
 // --------------------------------------------
 
-let score = 
-let champlain = 
+let score = 0;
+let champlain = false; 1
 
 // --------------------------------------------
 // STEP 3: CREATE THE ANSWER-CHECKING FUNCTION
@@ -87,7 +87,7 @@ const checkAnswer = () => {
   
   } else {
     // If no conditions match, show an error message
-    
+    statusBox.innerHTML = `Incorrect`
   }
 
   // After checking the answer, verify if the game is complete
@@ -114,9 +114,10 @@ const checkScore = () => {
  
   }
   if (score === 5 && champlain) {
-    
+    statusBox.innerHTML = 
     // Disable the text box since the game is complete
-    
+    "Good Job";
+    textBox.displayed = true;
   }
 };
 
